@@ -8,7 +8,7 @@ import { Route } from '@angular/compiler/src/core';
 })
 export class SidebarComponent implements OnInit {
   currentUrl: string;
-  constructor(private router:Router) {
+  constructor(private router: Router) {
     router.events.subscribe((_:NavigationEnd) => this.currentUrl = _.url);
    }
 

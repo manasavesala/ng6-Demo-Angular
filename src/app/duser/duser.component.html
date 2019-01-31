@@ -1,0 +1,39 @@
+<h1>Verified Selected User </h1>
+
+<div>
+  <ul>
+      <!-- {{user$.name}} -->
+      <ul>
+        <li><h3>Name:</h3> {{user$.name}}</li>
+        <li><h3>Email: </h3> {{user$.email}}</li>
+        <!-- <li><h3>Key:</h3>{{user$.$key}}</li> -->
+        <li><h3>Website:</h3> {{user$.website}}</li>
+      </ul>
+  </ul>
+</div>
+
+<div>
+    <h4>Edit user</h4>
+
+    <label>New user Name:</label>
+    <!-- <input [(ngModel)]="user.name"> -->
+    <input #newUsername value={{user$.name}}>
+    <br>
+    
+    <label>New user Email:</label>
+    <!-- <input [(ngModel)]="user.email"> -->
+    <input #newEmail value={{user$.email}}>    
+    <br>
+    
+    <label>New user website:</label>
+    <!-- <input [(ngModel)]="user.website"> -->
+    <input #newWebsite value={{user$.website}}>        
+    <button (click)="beginUpdatingUser({
+      name: newUsername.value,
+      email: newEmail.value,
+      website: newWebsite.value,
+      key: user$.$key
+    });">Update</button>
+    <button (click)="beginDeletingAlbum(user$.$key)"><h3 >Delete</h3></button>
+    <!-- <button (click)="beginUpdatinguser(newUsername.value, newEmail.value, newWebsite.value);">Update</button> -->
+</div>

@@ -1,0 +1,13 @@
+{ "users": [{
+    "name": "Murali Medisetty",
+    "email": "mkm@microsoft.com",
+    "website": "amazon.com",
+    "id": "1001"
+    },
+    {
+    "name": "Manasa Vesala",
+    "email": "vesala@microsoft.com",
+    "website": "google.com",
+    "id": "1002"
+    }]
+}
